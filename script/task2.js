@@ -8,7 +8,7 @@
 
 let arr = [];
 
-function generateArray() {
+function generateArray(arr) {
     while (arr.length < 7) {    
         let rand = Math.floor(Math.random() * 10);  
         if (!arr.includes(rand)) {
@@ -17,7 +17,10 @@ function generateArray() {
     }      
     console.log(arr);
 }
-generateArray();
+generateArray(arr);
 
-arr.sort((a, b) => a-b);
-console.log(arr);
+function sortArray(arr) {
+    return arr.sort((a, b) => a-b);
+}
+
+console.log(sortArray(arr));
