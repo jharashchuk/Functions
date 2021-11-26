@@ -6,8 +6,18 @@
 // * Упорядочить массив;
 // * Еще раз вывести его в консоль.
 
-let arr = [3, 0, 8, 2, 9, 7, 4,];
-console.log(arr);
+let arr = [];
+
+function generateArray() {
+    while (arr.length < 7) {    
+        let rand = Math.floor(Math.random() * 10);  
+        if (!arr.includes(rand)) {
+            arr.push(rand);
+        }         
+    }      
+    console.log(arr);
+}
+generateArray();
 
 arr.sort((a, b) => a-b);
 console.log(arr);
